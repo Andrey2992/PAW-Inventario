@@ -37,3 +37,44 @@ C:\Users\varit\source\repos\PAW\PAW.Web\bin\Debug\net8.0\PAW.Architecture.pdb
 C:\Users\varit\source\repos\PAW\PAW.Web\bin\Debug\net8.0\PAW.Models.pdb
 C:\Users\varit\source\repos\PAW\PAW.Web\obj\Debug\net8.0\PAW.Web.csproj.AssemblyReference.cache
 C:\Users\varit\source\repos\PAW\PAW.Web\obj\Debug\net8.0\PAW.Web.csproj.Up2Date
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\bin\Debug\net8.0\appsettings.json
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\bin\Debug\net8.0\PAW.Web.staticwebassets.runtime.json
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\bin\Debug\net8.0\PAW.Web.staticwebassets.endpoints.json
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\bin\Debug\net8.0\PAW.Web.exe
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\bin\Debug\net8.0\PAW.Web.deps.json
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\bin\Debug\net8.0\PAW.Web.runtimeconfig.json
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\bin\Debug\net8.0\PAW.Web.dll
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\bin\Debug\net8.0\PAW.Web.pdb
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\bin\Debug\net8.0\PAW.Architecture.dll
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\bin\Debug\net8.0\PAW.Models.dll
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\bin\Debug\net8.0\PAW.Architecture.pdb
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\bin\Debug\net8.0\PAW.Models.pdb
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\obj\Debug\net8.0\PAW.Web.csproj.AssemblyReference.cache
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\obj\Debug\net8.0\PAW.Web.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\obj\Debug\net8.0\PAW.Web.AssemblyInfoInputs.cache
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\obj\Debug\net8.0\PAW.Web.AssemblyInfo.cs
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\obj\Debug\net8.0\PAW.Web.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\obj\Debug\net8.0\PAW.Web.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\obj\Debug\net8.0\PAW.Web.RazorAssemblyInfo.cache
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\obj\Debug\net8.0\PAW.Web.RazorAssemblyInfo.cs
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\obj\Debug\net8.0\PAW.Web.sourcelink.json
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\obj\Debug\net8.0\scopedcss\bundle\PAW.Web.styles.css
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\obj\Debug\net8.0\scopedcss\projectbundle\PAW.Web.bundle.scp.css
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\obj\Debug\net8.0\swae.build.ex.cache
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\obj\Debug\net8.0\PAW.Web.csproj.Up2Date
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\obj\Debug\net8.0\PAW.Web.dll
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\obj\Debug\net8.0\refint\PAW.Web.dll
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\obj\Debug\net8.0\PAW.Web.pdb
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\obj\Debug\net8.0\PAW.Web.genruntimeconfig.cache
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Web\obj\Debug\net8.0\ref\PAW.Web.dll

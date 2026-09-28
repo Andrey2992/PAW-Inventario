@@ -13,3 +13,19 @@ C:\Users\varit\source\repos\PAW\PAW.Architecture\obj\Debug\net8.0\PAW.Architectu
 C:\Users\varit\source\repos\PAW\PAW.Architecture\obj\Debug\net8.0\refint\PAW.Architecture.dll
 C:\Users\varit\source\repos\PAW\PAW.Architecture\obj\Debug\net8.0\PAW.Architecture.pdb
 C:\Users\varit\source\repos\PAW\PAW.Architecture\obj\Debug\net8.0\ref\PAW.Architecture.dll
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Architecture\bin\Debug\net8.0\PAW.Architecture.deps.json
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Architecture\bin\Debug\net8.0\PAW.Architecture.dll
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Architecture\bin\Debug\net8.0\PAW.Architecture.pdb
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Architecture\bin\Debug\net8.0\PAW.Models.dll
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Architecture\bin\Debug\net8.0\PAW.Models.pdb
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Architecture\obj\Debug\net8.0\PAW.Architecture.csproj.AssemblyReference.cache
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Architecture\obj\Debug\net8.0\PAW.Architecture.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Architecture\obj\Debug\net8.0\PAW.Architecture.AssemblyInfoInputs.cache
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Architecture\obj\Debug\net8.0\PAW.Architecture.AssemblyInfo.cs
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Architecture\obj\Debug\net8.0\PAW.Architecture.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Architecture\obj\Debug\net8.0\PAW.Architecture.sourcelink.json
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Architecture\obj\Debug\net8.0\PAW.Arch.98323766.Up2Date
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Architecture\obj\Debug\net8.0\PAW.Architecture.dll
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Architecture\obj\Debug\net8.0\refint\PAW.Architecture.dll
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Architecture\obj\Debug\net8.0\PAW.Architecture.pdb
+C:\Users\Usuario\OneDrive\Escritorio\Andrey\Cuatris\8vo cuatri\Progra Avanzada Web\PAW-Inventario\PAW.Architecture\obj\Debug\net8.0\ref\PAW.Architecture.dll
