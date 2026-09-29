@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Text.Json.Serialization;
+using PawTask = PAW.Models.Task;
+
 namespace PAW.Models.DTO;
 
-public class PAWTaskDTO
+public class PawTaskDTO
 {
     [JsonPropertyName("id")]
     public Guid Id { get; set; }
@@ -25,20 +27,20 @@ public class PAWTaskDTO
     [JsonPropertyName("modifiedDate")]
     public DateTime ModifiedDate { get; set; }
 
-    public static PAWTaskDTO ConvertFrom(PAWTask task)
+    public static PawTaskDTO ConvertFrom(PawTask task)
 	{
-		return new PAWTaskDTO
+		return new PawTaskDTO
 		{
-			Id = task.Id,
-			TaskId = task.TaskId,
+			Id = Guid.NewGuid(),
+			TaskId = task.Id,
 			Name = task.Name,
 			Description = task.Description,
 			Status = task.Status,
 			DueDate = task.DueDate,
 			ModifiedBy = task.ModifiedBy,
-			Comments = task.Comments,
-			CreatedDate = task.CreatedDate,
-			ModifiedDate = task.ModifiedDate
+			Comments = string.Empty,
+			CreatedDate = task.CreatedAt ?? DateTime.Now,
+			ModifiedDate = task.LastModified ?? DateTime.Now
 		};
 	}
     public static PawTask ConvertTo(PawTaskDTO dto)
