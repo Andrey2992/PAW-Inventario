@@ -3,6 +3,7 @@ using PAW.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using PawTask = PAW.Models.Task;
 
 namespace PAW.DataAccess.Repositories;
 

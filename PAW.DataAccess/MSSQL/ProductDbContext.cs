@@ -262,12 +262,11 @@ public partial class ProductDbContext : DbContext
 
         modelBuilder.Entity<UserAction>(entity =>
         {
-            entity.HasNoKey();
+            entity.HasKey(e => e.Id);
 
             entity.Property(e => e.Description)
                 .HasMaxLength(100)
                 .IsUnicode(false);
-            entity.Property(e => e.Id).HasColumnType("numeric(18, 0)");
             entity.Property(e => e.Name)
                 .HasMaxLength(50)
                 .IsUnicode(false);
