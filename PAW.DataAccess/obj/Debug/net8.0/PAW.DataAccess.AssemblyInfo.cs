@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PAW.DataAccess")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ebd0fffe5899e07b38d66c8c7396a46c24808cb6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+114e7a61593c4e33b35b55f5b079c10ef63bd59e")]
 [assembly: System.Reflection.AssemblyProductAttribute("PAW.DataAccess")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PAW.DataAccess")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
