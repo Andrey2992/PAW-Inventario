@@ -14,6 +14,12 @@ builder.Services.AddScoped<IInventoryService, InventoryService>();
 builder.Services.AddScoped<IPawTaskService, PawTaskService>();
 builder.Services.AddScoped<IUserActionService, UserActionService>();
 builder.Services.AddScoped<INotificationService, NotificationService>();
+builder.Services.AddScoped<IPawTaskService, PawTaskService>();
+builder.Services.AddScoped<IUserActionService, UserActionService>();
+builder.Services.AddScoped<INotificationService, NotificationService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<ISupplierService, SupplierService>();
+builder.Services.AddScoped<IComponentService, ComponentService>();
 
 var app = builder.Build();
 
