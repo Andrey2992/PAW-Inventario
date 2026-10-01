@@ -28,6 +28,30 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="Index">Product</a>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link text-dark dropdown-toggle" href="#" id="entitiesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Entidades
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="entitiesDropdown">
+                                <li><h6 class="dropdown-header">Identidad y accesos</h6></li>
+                                <li><a class="dropdown-item" asp-controller="User" asp-action="Index">Users</a></li>
+                                <li><a class="dropdown-item" asp-controller="Role" asp-action="Index">Roles</a></li>
+                                <li><a class="dropdown-item" asp-controller="UserRole" asp-action="Index">User Roles</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><h6 class="dropdown-header">Catálogo y proveedores</h6></li>
+                                <li><a class="dropdown-item" asp-controller="Category" asp-action="Index">Categories</a></li>
+                                <li><a class="dropdown-item" asp-controller="Component" asp-action="Index">Components</a></li>
+                                <li><a class="dropdown-item" asp-controller="Supplier" asp-action="Index">Suppliers</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><h6 class="dropdown-header">Operaciones</h6></li>
+                                <li><a class="dropdown-item" asp-controller="Inventory" asp-action="Index">Inventory</a></li>
+                                <li><a class="dropdown-item" asp-controller="PawTask" asp-action="Index">Tasks</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><h6 class="dropdown-header">Auditoría y notificaciones</h6></li>
+                                <li><a class="dropdown-item" asp-controller="UserAction" asp-action="Index">User Actions</a></li>
+                                <li><a class="dropdown-item" asp-controller="Notification" asp-action="Index">Notifications</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
             </div>
