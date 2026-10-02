@@ -25,7 +25,7 @@ builder.Services.AddScoped<IUserActionRepository, UserActionRepository>();
 builder.Services.AddScoped<INotificationRepository, NotificationRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<ISupplierRepository, SupplierRepository>();
-builder.Services.AddScoped<IComponentRepository, ComponentRepository>();
+builder.Services.AddScoped<IComponentRepository, ComponentRepository>(); 
 
 var app = builder.Build();
 
