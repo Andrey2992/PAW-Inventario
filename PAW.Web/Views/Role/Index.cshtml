@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<PAW.Models.DTO.RoleDTO>
 @{
-    ViewData["Title"] = "Role Page";
+    ViewData["Title"] = "Roles Page";
 }
 
 <div class="container mt-4">
@@ -8,7 +8,9 @@
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h2>Roles</h2>
 
-        <a asp-action="Create" class="btn btn-primary">
+        <a asp-action="Create"
+           class="btn btn-primary js-modal-link"
+           data-modal-title="Add role">
             <i class="bi bi-plus-circle"></i>
             Add Role
         </a>
@@ -49,24 +51,23 @@
 
                                         <div class="btn-group" role="group">
 
-                                            <!-- Edit -->
                                             <a asp-action="Edit"
                                                asp-route-id="@role.RoleId"
-                                               class="btn btn-sm btn-warning">
+                                               class="btn btn-sm btn-warning js-modal-link"
+                                               data-modal-title="Edit role">
                                                 Edit
                                             </a>
 
-                                            <!-- Details -->
                                             <a asp-action="Details"
                                                asp-route-id="@role.RoleId"
-                                               class="btn btn-sm btn-info">
+                                               class="btn btn-sm btn-info js-modal-link"
+                                               data-modal-title="Role details">
                                                 Details
                                             </a>
-
-                                            <!-- Delete -->
                                             <a asp-action="Delete"
                                                asp-route-id="@role.RoleId"
-                                               class="btn btn-sm btn-danger">
+                                               class="btn btn-sm btn-danger js-modal-link"
+                                               data-modal-title="Delete role">
                                                 Delete
                                             </a>
 
@@ -94,5 +95,7 @@
 
         </div>
     </div>
+
+    <partial name="_Pagination" model='ViewData["Pagination"]' />
 
 </div>

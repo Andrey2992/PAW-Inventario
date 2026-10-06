@@ -8,7 +8,9 @@
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h2>User Roles</h2>
 
-        <a asp-action="Create" class="btn btn-primary">
+        <a asp-action="Create"
+           class="btn btn-primary js-modal-link"
+           data-modal-title="Add user role">
             <i class="bi bi-plus-circle"></i>
             Add UserRole
         </a>
@@ -56,21 +58,24 @@
                                             <!-- Edit -->
                                             <a asp-action="Edit"
                                                asp-route-id="@item.Id"
-                                               class="btn btn-sm btn-warning">
+                                               class="btn btn-sm btn-warning js-modal-link"
+                                               data-modal-title="Edit user role">
                                                 Edit
                                             </a>
 
                                             <!-- Details -->
                                             <a asp-action="Details"
                                                asp-route-id="@item.Id"
-                                               class="btn btn-sm btn-info">
+                                               class="btn btn-sm btn-info js-modal-link"
+                                               data-modal-title="User role details">
                                                 Details
                                             </a>
 
                                             <!-- Delete -->
                                             <a asp-action="Delete"
                                                asp-route-id="@item.Id"
-                                               class="btn btn-sm btn-danger">
+                                               class="btn btn-sm btn-danger js-modal-link"
+                                               data-modal-title="Delete user role">
                                                 Delete
                                             </a>
 
@@ -95,6 +100,8 @@
                 </table>
 
             </div>
+
+            <partial name="_Pagination" model='ViewData["Pagination"]' />
 
         </div>
     </div>
