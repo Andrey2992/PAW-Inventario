@@ -1,0 +1,27 @@
+@model PAW.Models.DTO.InventoryDTO
+
+<dl class="row mb-0">
+    <dt class="col-sm-4">Inventory ID</dt>
+    <dd class="col-sm-8">@Model.InventoryId</dd>
+
+    @if (ViewData["ProductName"] is string productName)
+    {
+        <dt class="col-sm-4">Product</dt>
+        <dd class="col-sm-8">@productName</dd>
+    }
+
+    <dt class="col-sm-4">Unit price</dt>
+    <dd class="col-sm-8">@(Model.UnitPrice?.ToString("C2") ?? "Not available")</dd>
+
+    <dt class="col-sm-4">Units in stock</dt>
+    <dd class="col-sm-8">@(Model.UnitsInStock?.ToString() ?? "Not available")</dd>
+
+    <dt class="col-sm-4">Date added</dt>
+    <dd class="col-sm-8">@(Model.DateAdded?.ToString("yyyy-MM-dd HH:mm") ?? "Not available")</dd>
+
+    <dt class="col-sm-4">Last updated</dt>
+    <dd class="col-sm-8">@(Model.LastUpdated?.ToString("yyyy-MM-dd HH:mm") ?? "Not available")</dd>
+
+    <dt class="col-sm-4">Modified by</dt>
+    <dd class="col-sm-8">@(Model.ModifiedBy ?? "Not available")</dd>
+</dl>

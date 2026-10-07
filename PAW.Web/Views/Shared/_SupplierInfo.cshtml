@@ -1,0 +1,23 @@
+@model PAW.Models.DTO.SupplierDTO
+@{
+    var locationParts = new[] { Model.Address, Model.City, Model.Country }
+        .Where(part => !string.IsNullOrWhiteSpace(part));
+    var location = string.Join(", ", locationParts);
+}
+
+<dl class="row mb-0">
+    <dt class="col-sm-4">Supplier ID</dt>
+    <dd class="col-sm-8">@Model.SupplierId</dd>
+
+    <dt class="col-sm-4">Name</dt>
+    <dd class="col-sm-8">@Model.SupplierName</dd>
+
+    <dt class="col-sm-4">Contact</dt>
+    <dd class="col-sm-8">@(string.IsNullOrWhiteSpace(Model.ContactName) ? "Not available" : Model.ContactName)</dd>
+
+    <dt class="col-sm-4">Phone</dt>
+    <dd class="col-sm-8">@(string.IsNullOrWhiteSpace(Model.Phone) ? "Not available" : Model.Phone)</dd>
+
+    <dt class="col-sm-4">Location</dt>
+    <dd class="col-sm-8">@(location.Length == 0 ? "Not available" : location)</dd>
+</dl>

@@ -8,7 +8,9 @@
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h2>Inventory</h2>
 
-        <a asp-action="Create" class="btn btn-primary">
+        <a asp-action="Create"
+           class="btn btn-primary js-modal-link"
+           data-modal-title="Add inventory">
             <i class="bi bi-plus-circle"></i>
             Add Inventory
         </a>
@@ -79,11 +81,11 @@
                                     </td>
 
                                     <td>
-                                        @inventory.CreatedDate.ToString("yyyy-MM-dd HH:mm")
+                                        @(inventory.DateAdded?.ToString("yyyy-MM-dd HH:mm") ?? "-")
                                     </td>
 
                                     <td>
-                                        @inventory.ModifiedDate.ToString("yyyy-MM-dd HH:mm")
+                                        @(inventory.LastUpdated?.ToString("yyyy-MM-dd HH:mm") ?? "-")
                                     </td>
 
                                     <td>
@@ -97,21 +99,24 @@
                                             <!-- Edit -->
                                             <a asp-action="Edit"
                                                asp-route-id="@inventory.InventoryId"
-                                               class="btn btn-sm btn-warning">
+                                               class="btn btn-sm btn-warning js-modal-link"
+                                               data-modal-title="Edit inventory">
                                                 Edit
                                             </a>
 
                                             <!-- Details -->
                                             <a asp-action="Details"
                                                asp-route-id="@inventory.InventoryId"
-                                               class="btn btn-sm btn-info">
+                                               class="btn btn-sm btn-info js-modal-link"
+                                               data-modal-title="Inventory details">
                                                 Details
                                             </a>
 
                                             <!-- Delete -->
                                             <a asp-action="Delete"
                                                asp-route-id="@inventory.InventoryId"
-                                               class="btn btn-sm btn-danger">
+                                               class="btn btn-sm btn-danger js-modal-link"
+                                               data-modal-title="Delete inventory">
                                                 Delete
                                             </a>
 
@@ -139,5 +144,7 @@
 
         </div>
     </div>
+
+    <partial name="_Pagination" model='ViewData["Pagination"]' />
 
 </div>

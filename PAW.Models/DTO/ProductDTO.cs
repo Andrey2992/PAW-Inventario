@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace PAW.Models.DTO;
 
@@ -9,17 +10,29 @@ public class ProductDTO
     [JsonPropertyName("productId")]
     public int ProductId { get; set; }
     [JsonPropertyName("name")]
-    public string Name { get; set; }
+    [Required(ErrorMessage = "The name is required.")]
+    [StringLength(255)]
+    public string Name { get; set; } = string.Empty;
     [JsonPropertyName("description")]
-    public string Description { get; set; }
+    [StringLength(1000)]
+    public string? Description { get; set; }
     [JsonPropertyName("rating")]
+    [Range(0, 5, ErrorMessage = "The rating must be between 0 and 5.")]
     public int Rating { get; set; }
+    [JsonPropertyName("inventoryId")]
+    public int? InventoryId { get; set; }
+    [JsonPropertyName("supplierId")]
+    public int? SupplierId { get; set; }
+    [JsonPropertyName("categoryId")]
+    public int? CategoryId { get; set; }
     [JsonPropertyName("modifiedBy")]
+    [StringLength(255)]
     public string? ModifiedBy { get; set; }
     [JsonPropertyName("createdBy")]
+    [StringLength(100)]
     public string? CreatedBy { get; set; }
     [JsonPropertyName("comments")]
-    public string Comments { get; set; }
+    public string? Comments { get; set; }
     [JsonPropertyName("createdDate")]
     public DateTime CreatedDate { get; set; }
     [JsonPropertyName("modifiedDate")]
@@ -31,9 +44,12 @@ public class ProductDTO
         {
             Id = Guid.NewGuid(),
             ProductId = product.ProductId,
-            Name = product.ProductName!,
-            Description = product.Description!,
+            Name = product.ProductName ?? string.Empty,
+            Description = product.Description,
             Rating = (int)(product.Rating ?? 0),
+            InventoryId = product.InventoryId,
+            SupplierId = product.SupplierId,
+            CategoryId = product.CategoryId,
             ModifiedBy = product.ModifiedBy,
             CreatedBy = product.CreatedBy,
             Comments = string.Empty, // Assuming comments are not present in the Product entity
@@ -43,16 +59,19 @@ public class ProductDTO
     }
 
     public static Product ConvertTo(ProductDTO productDTO)
+    {
+        return new Product
         {
-            return new Product
-            {
-                ProductId = productDTO.ProductId,
-                ProductName = productDTO.Name,
-                Description = productDTO.Description,
-                Rating = productDTO.Rating,
-                ModifiedBy = productDTO.ModifiedBy,
-                CreatedBy = productDTO.CreatedBy,
-                LastModified = productDTO.ModifiedDate
-            };
+            ProductId = productDTO.ProductId,
+            ProductName = productDTO.Name,
+            Description = productDTO.Description,
+            Rating = productDTO.Rating,
+            InventoryId = productDTO.InventoryId,
+            SupplierId = productDTO.SupplierId,
+            CategoryId = productDTO.CategoryId,
+            ModifiedBy = productDTO.ModifiedBy,
+            CreatedBy = productDTO.CreatedBy,
+            LastModified = DateTime.Now // the table only has LastModified
+        };
     }
 }

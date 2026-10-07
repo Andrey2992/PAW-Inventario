@@ -1,0 +1,56 @@
+@model PAW.Models.DTO.ProductDTO
+@* Campos compartidos por _Create y _Edit. *@
+
+<div class="mb-3">
+    <label asp-for="Name" class="form-label">Name</label>
+    <input asp-for="Name" class="form-control" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+</div>
+
+<div class="mb-3">
+    <label asp-for="Description" class="form-label">Description</label>
+    <textarea asp-for="Description" class="form-control" rows="2"></textarea>
+    <span asp-validation-for="Description" class="text-danger"></span>
+</div>
+
+<div class="mb-3">
+    <label asp-for="Rating" class="form-label">Rating</label>
+    <input asp-for="Rating" type="number" min="0" max="5" step="1" class="form-control" />
+    <span asp-validation-for="Rating" class="text-danger"></span>
+</div>
+
+<div class="mb-3">
+    <label asp-for="CategoryId" class="form-label">Category</label>
+    <select asp-for="CategoryId" class="form-select">
+        <option value="">No category</option>
+        @foreach (var category in ViewBag.Categories)
+        {
+            <option value="@category.CategoryId">@category.CategoryName</option>
+        }
+    </select>
+    <span asp-validation-for="CategoryId" class="text-danger"></span>
+</div>
+
+<div class="mb-3">
+    <label asp-for="SupplierId" class="form-label">Supplier</label>
+    <select asp-for="SupplierId" class="form-select">
+        <option value="">No supplier</option>
+        @foreach (var supplier in ViewBag.Suppliers)
+        {
+            <option value="@supplier.SupplierId">@supplier.SupplierName</option>
+        }
+    </select>
+    <span asp-validation-for="SupplierId" class="text-danger"></span>
+</div>
+
+<div class="mb-3">
+    <label asp-for="InventoryId" class="form-label">Inventory</label>
+    <select asp-for="InventoryId" class="form-select">
+        <option value="">No inventory</option>
+        @foreach (var inventory in ViewBag.Inventories)
+        {
+            <option value="@inventory.InventoryId">Inventory @inventory.InventoryId (@(inventory.UnitsInStock ?? 0) in stock)</option>
+        }
+    </select>
+    <span asp-validation-for="InventoryId" class="text-danger"></span>
+</div>
