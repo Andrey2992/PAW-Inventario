@@ -8,7 +8,9 @@
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h2>Tasks</h2>
 
-        <a asp-action="Create" class="btn btn-primary">
+        <a asp-action="Create"
+           class="btn btn-primary js-modal-link"
+           data-modal-title="Add task">
             <i class="bi bi-plus-circle"></i>
             Add Task
         </a>
@@ -96,21 +98,24 @@
                                             <!-- Edit -->
                                             <a asp-action="Edit"
                                                asp-route-id="@task.TaskId"
-                                               class="btn btn-sm btn-warning">
+                                               class="btn btn-sm btn-warning js-modal-link"
+                                               data-modal-title="Edit task">
                                                 Edit
                                             </a>
 
                                             <!-- Details -->
                                             <a asp-action="Details"
                                                asp-route-id="@task.TaskId"
-                                               class="btn btn-sm btn-info">
+                                               class="btn btn-sm btn-info js-modal-link"
+                                               data-modal-title="Task details">
                                                 Details
                                             </a>
 
                                             <!-- Delete -->
                                             <a asp-action="Delete"
                                                asp-route-id="@task.TaskId"
-                                               class="btn btn-sm btn-danger">
+                                               class="btn btn-sm btn-danger js-modal-link"
+                                               data-modal-title="Delete task">
                                                 Delete
                                             </a>
 
@@ -138,5 +143,7 @@
 
         </div>
     </div>
+
+    <partial name="_Pagination" model='ViewData["Pagination"]' />
 
 </div>

@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace PAW.Models.DTO;
 
@@ -9,8 +10,11 @@ public class NotificationDTO
     [JsonPropertyName("notificationId")]
     public int NotificationId { get; set; }
     [JsonPropertyName("userId")]
+    [Range(1, int.MaxValue, ErrorMessage = "User ID is required")]
     public int UserId { get; set; }
     [JsonPropertyName("message")]
+    [Required(ErrorMessage = "Message is required")]
+    [StringLength(255)]
     public string Message { get; set; } = string.Empty;
     [JsonPropertyName("isRead")]
     public bool IsRead { get; set; }

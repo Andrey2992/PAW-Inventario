@@ -12,34 +12,42 @@ namespace PAW.API.Controllers
         [HttpGet(Name = "GetUserActions")]
         public async Task<IEnumerable<UserActionDTO>> GetAll()
         {
-            var userActions = await userActionRepository.ReadAsync() ?? [];
-            return userActions.Select(UserActionDTO.ConvertFrom);
+            var items = await userActionRepository.ReadAsync() ?? [];
+            return items.Select(UserActionDTO.ConvertFrom);
         }
 
         [HttpGet("{id:int}", Name = "GetUserActionById")]
         public async Task<ActionResult<UserActionDTO>> GetById(int id)
         {
-            var userAction = await userActionRepository.FindAsync(id);
-            return UserActionDTO.ConvertFrom(userAction);
+            var item = await userActionRepository.FindAsync(id);
+            if (item is null)
+                return NotFound();
+
+            return UserActionDTO.ConvertFrom(item);
         }
 
         [HttpPost]
-        public async Task<bool> Save([FromBody] IEnumerable<UserAction> UserActions)
+        public async Task<bool> Save([FromBody] IEnumerable<UserActionDTO> items)
         {
-            foreach (var userAction in UserActions)
+            var allSaved = true;
+            foreach (var dto in items)
             {
-                if (userAction.Id > 0)
-                    await userActionRepository.CreateAsync(userAction);
-                else await userActionRepository.UpdateAsync(userAction);
+                var entity = UserActionDTO.ConvertTo(dto);
+                // Id > 0 => ya existe, se actualiza; si no, se crea
+                var saved = await userActionRepository.UpsertAsync(entity, isUpdating: entity.Id > 0);
+                allSaved &= saved;
             }
-
-            return true;
+            return allSaved;
         }
 
-        [HttpDelete]
-        public async Task<bool> Delete(UserAction UserAction)
+        [HttpDelete("{id:int}")]
+        public async Task<ActionResult<bool>> Delete(int id)
         {
-            return await userActionRepository.DeleteAsync(UserAction);
+            var item = await userActionRepository.FindAsync(id);
+            if (item is null)
+                return NotFound();
+
+            return await userActionRepository.DeleteAsync(item);
         }
     }
 }

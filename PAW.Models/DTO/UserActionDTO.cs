@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace PAW.Models.DTO;
 
@@ -9,8 +10,11 @@ public class UserActionDTO
     [JsonPropertyName("userActionId")]
     public int UserActionId { get; set; }
     [JsonPropertyName("name")]
+    [Required(ErrorMessage = "Name is required")]
+    [StringLength(50)]
     public string? Name { get; set; }
     [JsonPropertyName("description")]
+    [StringLength(100)]
     public string? Description { get; set; }
 
     public static UserActionDTO ConvertFrom(UserAction userAction)

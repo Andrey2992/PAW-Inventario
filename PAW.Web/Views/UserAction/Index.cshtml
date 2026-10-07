@@ -8,7 +8,9 @@
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h2>User Actions</h2>
 
-        <a asp-action="Create" class="btn btn-primary">
+        <a asp-action="Create"
+           class="btn btn-primary js-modal-link"
+           data-modal-title="Add user action">
             <i class="bi bi-plus-circle"></i>
             Add User Action
         </a>
@@ -56,22 +58,25 @@
 
                                             <!-- Edit -->
                                             <a asp-action="Edit"
-                                               asp-route-id="@userAction.Id"
-                                               class="btn btn-sm btn-warning">
+                                               asp-route-id="@userAction.UserActionId"
+                                               class="btn btn-sm btn-warning js-modal-link"
+                                               data-modal-title="Edit user action">
                                                 Edit
                                             </a>
 
                                             <!-- Details -->
                                             <a asp-action="Details"
-                                               asp-route-id="@userAction.Id"
-                                               class="btn btn-sm btn-info">
+                                               asp-route-id="@userAction.UserActionId"
+                                               class="btn btn-sm btn-info js-modal-link"
+                                               data-modal-title="User action details">
                                                 Details
                                             </a>
 
                                             <!-- Delete -->
                                             <a asp-action="Delete"
-                                               asp-route-id="@userAction.Id"
-                                               class="btn btn-sm btn-danger">
+                                               asp-route-id="@userAction.UserActionId"
+                                               class="btn btn-sm btn-danger js-modal-link"
+                                               data-modal-title="Delete user action">
                                                 Delete
                                             </a>
 
@@ -99,5 +104,7 @@
 
         </div>
     </div>
+
+    <partial name="_Pagination" model='ViewData["Pagination"]' />
 
 </div>

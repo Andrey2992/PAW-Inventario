@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 using PawTask = PAW.Models.Task;
 
@@ -11,14 +12,19 @@ public class PawTaskDTO
     [JsonPropertyName("taskId")]
     public int TaskId { get; set; }
     [JsonPropertyName("name")]
+    [Required(ErrorMessage = "Name is required")]
+    [StringLength(255)]
     public string? Name { get; set; }
     [JsonPropertyName("description")]
+    [StringLength(1000)]
     public string? Description { get; set; }
     [JsonPropertyName("status")]
+    [StringLength(50)]
     public string? Status { get; set; }
     [JsonPropertyName("dueDate")]
     public DateTime? DueDate { get; set; }
     [JsonPropertyName("modifiedBy")]
+    [StringLength(255)]
     public string? ModifiedBy { get; set; }
     [JsonPropertyName("comments")]
     public string Comments { get; set; } = string.Empty;

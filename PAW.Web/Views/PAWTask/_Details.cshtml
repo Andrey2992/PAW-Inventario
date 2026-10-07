@@ -1,0 +1,27 @@
+@model PAW.Models.DTO.PawTaskDTO
+
+<dl class="row mb-0">
+    <dt class="col-sm-4">Task ID</dt>
+    <dd class="col-sm-8">@Model.TaskId</dd>
+
+    <dt class="col-sm-4">Name</dt>
+    <dd class="col-sm-8">@Model.Name</dd>
+
+    <dt class="col-sm-4">Description</dt>
+    <dd class="col-sm-8">@Model.Description</dd>
+
+    <dt class="col-sm-4">Status</dt>
+    <dd class="col-sm-8">@(string.IsNullOrWhiteSpace(Model.Status) ? "N/A" : Model.Status)</dd>
+
+    <dt class="col-sm-4">Due date</dt>
+    <dd class="col-sm-8">@(Model.DueDate?.ToString("yyyy-MM-dd HH:mm") ?? "-")</dd>
+
+    <dt class="col-sm-4">Created date</dt>
+    <dd class="col-sm-8">@Model.CreatedDate.ToString("yyyy-MM-dd HH:mm")</dd>
+
+    <dt class="col-sm-4">Modified by</dt>
+    <dd class="col-sm-8">@Model.ModifiedBy</dd>
+
+    <dt class="col-sm-4">Modified date</dt>
+    <dd class="col-sm-8">@Model.ModifiedDate.ToString("yyyy-MM-dd HH:mm")</dd>
+</dl>

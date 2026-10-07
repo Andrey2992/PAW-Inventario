@@ -12,34 +12,42 @@ namespace PAW.API.Controllers
         [HttpGet(Name = "GetNotifications")]
         public async Task<IEnumerable<NotificationDTO>> GetAll()
         {
-            var notifications = await notificationRepository.ReadAsync() ?? [];
-            return notifications.Select(NotificationDTO.ConvertFrom);
+            var items = await notificationRepository.ReadAsync() ?? [];
+            return items.Select(NotificationDTO.ConvertFrom);
         }
 
         [HttpGet("{id:int}", Name = "GetNotificationById")]
         public async Task<ActionResult<NotificationDTO>> GetById(int id)
         {
-            var notification = await notificationRepository.FindAsync(id);
-            return NotificationDTO.ConvertFrom(notification);
+            var item = await notificationRepository.FindAsync(id);
+            if (item is null)
+                return NotFound();
+
+            return NotificationDTO.ConvertFrom(item);
         }
 
         [HttpPost]
-        public async Task<bool> Save([FromBody] IEnumerable<Notification> Notifications)
+        public async Task<bool> Save([FromBody] IEnumerable<NotificationDTO> items)
         {
-            foreach (var notification in Notifications)
+            var allSaved = true;
+            foreach (var dto in items)
             {
-                if (notification.Id > 0)
-                    await notificationRepository.CreateAsync(notification);
-                else await notificationRepository.UpdateAsync(notification);
+                var entity = NotificationDTO.ConvertTo(dto);
+                // Id > 0 => ya existe, se actualiza; si no, se crea
+                var saved = await notificationRepository.UpsertAsync(entity, isUpdating: entity.Id > 0);
+                allSaved &= saved;
             }
-
-            return true;
+            return allSaved;
         }
 
-        [HttpDelete]
-        public async Task<bool> Delete(Notification Notification)
+        [HttpDelete("{id:int}")]
+        public async Task<ActionResult<bool>> Delete(int id)
         {
-            return await notificationRepository.DeleteAsync(Notification);
+            var item = await notificationRepository.FindAsync(id);
+            if (item is null)
+                return NotFound();
+
+            return await notificationRepository.DeleteAsync(item);
         }
     }
 }
