@@ -1,6 +1,6 @@
 @model PAW.Models.DTO.UserActionDTO
 
-<form asp-action="Delete" method="post" class="js-modal-form">
+<form asp-action="Delete" asp-route-id="" method="post" class="js-modal-form">
     @Html.AntiForgeryToken()
     <input asp-for="UserActionId" type="hidden" />
 

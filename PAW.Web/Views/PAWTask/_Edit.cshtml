@@ -1,6 +1,6 @@
 @model PAW.Models.DTO.PawTaskDTO
 
-<form asp-action="Edit" method="post" class="js-modal-form">
+<form asp-action="Edit" asp-route-id="" method="post" class="js-modal-form">
     @Html.AntiForgeryToken()
     <input asp-for="TaskId" type="hidden" />
     <input asp-for="CreatedDate" type="hidden" />

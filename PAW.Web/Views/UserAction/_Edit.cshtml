@@ -1,6 +1,6 @@
 @model PAW.Models.DTO.UserActionDTO
 
-<form asp-action="Edit" method="post" class="js-modal-form">
+<form asp-action="Edit" asp-route-id="" method="post" class="js-modal-form">
     @Html.AntiForgeryToken()
     <input asp-for="UserActionId" type="hidden" />
 
