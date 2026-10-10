@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using PAW.DataAccess.Repositories;
 using PAW.Models;
 using PAW.Models.DTO;
@@ -20,6 +20,9 @@ namespace PAW.API.Controllers
         public async Task<ActionResult<ProductDTO>> GetById(int id)
         {
             var product = await productRepository.FindAsync(id);
+            if (product is null)
+                return NotFound();
+
             return ProductDTO.ConvertFrom(product);
         }
 
@@ -32,28 +35,27 @@ namespace PAW.API.Controllers
         }*/
 
         [HttpPost]
-        public async Task<bool> Save([FromBody] IEnumerable<Product> Products)
+        public async Task<bool> Save([FromBody] IEnumerable<ProductDTO> items)
         {
-            foreach (var p in Products)
+            var allSaved = true;
+            foreach (var dto in items)
             {
-                if (p.ProductId > 0)
-                    await productRepository.CreateAsync(p);
-                else await productRepository.UpdateAsync(p);
+                var entity = ProductDTO.ConvertTo(dto);
+                // ProductId > 0 => already exists, so update; otherwise create
+                var saved = await productRepository.UpsertAsync(entity, isUpdating: entity.ProductId > 0);
+                allSaved &= saved;
             }
-
-            /*Products.ToList().ForEach(async x =>
-            {
-                if (x.Id > 0)
-                    await productRepository.CreateAsync(x);
-                else await productRepository.UpdateAsync(x);
-            });*/
-            return true;
+            return allSaved;
         }
 
-        [HttpDelete]
-        public async Task<bool> Delete(Product Product)
+        [HttpDelete("{id:int}")]
+        public async Task<ActionResult<bool>> Delete(int id)
         {
-            return await productRepository.DeleteAsync(Product);
+            var product = await productRepository.FindAsync(id);
+            if (product is null)
+                return NotFound();
+
+            return await productRepository.DeleteAsync(product);
         }
     }
 }

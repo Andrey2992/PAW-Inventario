@@ -1,0 +1,31 @@
+﻿@model PAW.Models.DTO.SupplierDTO
+@{
+    var productCount = ViewData["ProductCount"] as int? ?? 0;
+}
+
+<form asp-action="Delete" method="post" class="js-modal-form">
+    @Html.AntiForgeryToken()
+    <input asp-for="SupplierId" type="hidden" />
+    <input asp-for="SupplierName" type="hidden" />
+
+    @if (ViewData["ModalError"] is string error)
+    {
+        <div class="alert alert-danger">@error</div>
+    }
+
+    @if (productCount > 0)
+    {
+        <div class="alert alert-warning">
+            This supplier has @productCount associated @(productCount == 1 ? "product" : "products").
+            Reassign or delete them before deleting the supplier.
+        </div>
+    }
+
+    <p>Are you sure you want to delete the supplier <strong>@Model.SupplierName</strong>?</p>
+
+    <div class="d-flex justify-content-end gap-2">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="submit" class="btn btn-danger" disabled="@(productCount > 0)">Delete</button>
+    </div>
+</form>
+

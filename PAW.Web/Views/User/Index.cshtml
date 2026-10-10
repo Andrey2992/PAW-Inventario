@@ -1,0 +1,118 @@
+﻿@model IEnumerable<PAW.Models.DTO.UserDTO>
+@{
+    ViewData["Title"] = "User Page";
+}
+<div class="container mt-4">
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Users</h2>
+
+        <a asp-action="Create"
+           class="btn btn-primary js-modal-link"
+           data-modal-title="Add user">
+            <i class="bi bi-plus-circle"></i>
+            Add User
+        </a>
+    </div>
+    <div class="card shadow-sm">
+        <div class="card-body">
+
+            <div class="table-responsive">
+
+                <table class="table table-striped table-hover align-middle">
+
+                    <thead class="table-dark">
+                        <tr>
+                            <th>User ID</th>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Role ID</th>
+                            <th>Active</th>
+                            <th class="text-center">Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        @if (Model != null && Model.Any())
+                        {
+                            foreach (var user in Model)
+                            {
+                                <tr>
+
+                                    <td>
+                                        @user.UserId
+                                    </td>
+
+                                    <td>
+                                        <strong>@user.Username</strong>
+                                    </td>
+
+                                    <td>
+                                        @user.Email
+                                    </td>
+
+                                    <td>
+                                        @user.RoleId
+                                    </td>
+
+                                    <td>
+                                        @(user.IsActive ? "Yes" : "No")
+                                    </td>
+
+                                    <td class="text-center">
+
+                                        <div class="btn-group" role="group">
+
+                                            <!-- Edit -->
+                                            <a asp-action="Edit"
+                                               asp-route-id="@user.UserId"
+                                               class="btn btn-sm btn-warning js-modal-link"
+                                               data-modal-title="Edit user">
+                                                Edit
+                                            </a>
+
+                                            <!-- Details -->
+                                            <a asp-action="Details"
+                                               asp-route-id="@user.UserId"
+                                               class="btn btn-sm btn-info js-modal-link"
+                                               data-modal-title="User details">
+                                                Details
+                                            </a>
+
+                                            <!-- Delete -->
+                                            <a asp-action="Delete"
+                                               asp-route-id="@user.UserId"
+                                               class="btn btn-sm btn-danger js-modal-link"
+                                               data-modal-title="Delete user">
+                                                Delete
+                                            </a>
+
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="6" class="text-center">
+                                    No users found.
+                                </td>
+                            </tr>
+                        }
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <partial name="_Pagination" model='ViewData["Pagination"]' />
+
+        </div>
+    </div>
+
+</div>

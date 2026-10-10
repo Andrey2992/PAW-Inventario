@@ -8,7 +8,9 @@
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h2>Products</h2>
 
-        <a asp-action="Create" class="btn btn-primary">
+        <a asp-action="Create"
+           class="btn btn-primary js-modal-link"
+           data-modal-title="Add product">
             <i class="bi bi-plus-circle"></i>
             Add Product
         </a>
@@ -96,22 +98,25 @@
 
                                             <!-- Edit -->
                                             <a asp-action="Edit"
-                                               asp-route-id="@product.Id"
-                                               class="btn btn-sm btn-warning">
+                                               asp-route-id="@product.ProductId"
+                                               class="btn btn-sm btn-warning js-modal-link"
+                                               data-modal-title="Edit product">
                                                 Edit
                                             </a>
 
                                             <!-- Details -->
                                             <a asp-action="Details"
-                                               asp-route-id="@product.Id"
-                                               class="btn btn-sm btn-info">
+                                               asp-route-id="@product.ProductId"
+                                               class="btn btn-sm btn-info js-modal-link"
+                                               data-modal-title="Product details">
                                                 Details
                                             </a>
 
                                             <!-- Delete -->
                                             <a asp-action="Delete"
-                                               asp-route-id="@product.Id"
-                                               class="btn btn-sm btn-danger">
+                                               asp-route-id="@product.ProductId"
+                                               class="btn btn-sm btn-danger js-modal-link"
+                                               data-modal-title="Delete product">
                                                 Delete
                                             </a>
 
@@ -139,5 +144,7 @@
 
         </div>
     </div>
+
+    <partial name="_Pagination" model='ViewData["Pagination"]' />
 
 </div>

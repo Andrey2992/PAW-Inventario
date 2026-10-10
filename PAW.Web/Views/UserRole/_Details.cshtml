@@ -1,0 +1,12 @@
+@model PAW.Models.DTO.UserRoleDTO
+
+<dl class="row mb-0">
+    <dt class="col-sm-4">Assignment ID</dt>
+    <dd class="col-sm-8">@Model.Id</dd>
+
+    <dt class="col-sm-4">User</dt>
+    <dd class="col-sm-8">@(Model.UserName ?? $"User #{Model.UserId}")</dd>
+
+    <dt class="col-sm-4">Role</dt>
+    <dd class="col-sm-8">@(Model.RoleName ?? $"Role #{Model.RoleId}")</dd>
+</dl>

@@ -1,0 +1,21 @@
+﻿@model PAW.Models.DTO.CategoryDTO
+@* Campos compartidos por _Create y _Edit. *@
+
+<div class="mb-3">
+    <label asp-for="CategoryName" class="form-label">Name</label>
+    <input asp-for="CategoryName" class="form-control" />
+    <span asp-validation-for="CategoryName" class="text-danger"></span>
+</div>
+
+<div class="mb-3">
+    <label asp-for="Description" class="form-label">Description</label>
+    <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+    <span asp-validation-for="Description" class="text-danger"></span>
+</div>
+
+<div class="mb-3">
+    <label asp-for="ModifiedBy" class="form-label">Modified by</label>
+    <input asp-for="ModifiedBy" class="form-control" />
+    <span asp-validation-for="ModifiedBy" class="text-danger"></span>
+</div>
+

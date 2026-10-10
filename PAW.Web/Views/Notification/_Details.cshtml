@@ -1,0 +1,18 @@
+@model PAW.Models.DTO.NotificationDTO
+
+<dl class="row mb-0">
+    <dt class="col-sm-4">Notification ID</dt>
+    <dd class="col-sm-8">@Model.NotificationId</dd>
+
+    <dt class="col-sm-4">User ID</dt>
+    <dd class="col-sm-8">@Model.UserId</dd>
+
+    <dt class="col-sm-4">Message</dt>
+    <dd class="col-sm-8">@Model.Message</dd>
+
+    <dt class="col-sm-4">Status</dt>
+    <dd class="col-sm-8">@(Model.IsRead ? "Read" : "Unread")</dd>
+
+    <dt class="col-sm-4">Created at</dt>
+    <dd class="col-sm-8">@(Model.CreatedAt?.ToString("yyyy-MM-dd HH:mm") ?? "-")</dd>
+</dl>

@@ -1,0 +1,33 @@
+@model PAW.Models.DTO.InventoryDTO
+@* Campos compartidos por _Create y _Edit. *@
+
+<div class="mb-3">
+    <label asp-for="ProductId" class="form-label">Product</label>
+    <select asp-for="ProductId" class="form-select">
+        <option value="">No product</option>
+        @foreach (var product in ViewBag.Products)
+        {
+            <option value="@product.ProductId">@product.Name</option>
+        }
+    </select>
+    <span asp-validation-for="ProductId" class="text-danger"></span>
+</div>
+
+<div class="mb-3">
+    <label asp-for="UnitPrice" class="form-label">Unit price</label>
+    <input asp-for="UnitPrice" type="number" min="0" step="0.01" class="form-control"
+           value="@Model.UnitPrice?.ToString("0.00", System.Globalization.CultureInfo.InvariantCulture)" />
+    <span asp-validation-for="UnitPrice" class="text-danger"></span>
+</div>
+
+<div class="mb-3">
+    <label asp-for="UnitsInStock" class="form-label">Units in stock</label>
+    <input asp-for="UnitsInStock" type="number" min="0" step="1" class="form-control" />
+    <span asp-validation-for="UnitsInStock" class="text-danger"></span>
+</div>
+
+<div class="mb-3">
+    <label asp-for="ModifiedBy" class="form-label">Modified by</label>
+    <input asp-for="ModifiedBy" class="form-control" />
+    <span asp-validation-for="ModifiedBy" class="text-danger"></span>
+</div>

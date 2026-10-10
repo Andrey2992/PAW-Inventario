@@ -1,0 +1,23 @@
+﻿@model PAW.Web.Models.CategoryDetailsViewModel
+
+<h6 class="border-bottom pb-1">Category</h6>
+<dl class="row">
+    <dt class="col-sm-4">Category ID</dt>
+    <dd class="col-sm-8">@Model.Category.CategoryId</dd>
+
+    <dt class="col-sm-4">Name</dt>
+    <dd class="col-sm-8">@(Model.Category.CategoryName ?? "Not available")</dd>
+
+    <dt class="col-sm-4">Description</dt>
+    <dd class="col-sm-8">@(string.IsNullOrWhiteSpace(Model.Category.Description) ? "Not available" : Model.Category.Description)</dd>
+
+    <dt class="col-sm-4">Modified by</dt>
+    <dd class="col-sm-8">@(Model.Category.ModifiedBy ?? "Not available")</dd>
+
+    <dt class="col-sm-4">Last modified</dt>
+    <dd class="col-sm-8">@Model.Category.ModifiedDate.ToString("yyyy-MM-dd HH:mm")</dd>
+</dl>
+
+<h6 class="border-bottom pb-1">Products (@Model.Products.Count)</h6>
+<partial name="_ProductAssociations" model="Model.Products" />
+
