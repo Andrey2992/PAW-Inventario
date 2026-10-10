@@ -1,0 +1,15 @@
+﻿@model PAW.Models.DTO.ComponentDTO
+@* Campos compartidos por _Create y _Edit. *@
+
+<div class="mb-3">
+    <label asp-for="Name" class="form-label">Name</label>
+    <input asp-for="Name" class="form-control" maxlength="50" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+</div>
+
+<div class="mb-3">
+    <label asp-for="Content" class="form-label">Content</label>
+    <input asp-for="Content" class="form-control" maxlength="100" />
+    <span asp-validation-for="Content" class="text-danger"></span>
+</div>
+

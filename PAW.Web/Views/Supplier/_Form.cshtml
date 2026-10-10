@@ -1,0 +1,53 @@
+﻿@model PAW.Models.DTO.SupplierDTO
+@* Campos compartidos por _Create y _Edit. *@
+
+<div class="mb-3">
+    <label asp-for="SupplierName" class="form-label">Name</label>
+    <input asp-for="SupplierName" class="form-control" />
+    <span asp-validation-for="SupplierName" class="text-danger"></span>
+</div>
+
+<div class="row">
+    <div class="col-md-6 mb-3">
+        <label asp-for="ContactName" class="form-label">Contact</label>
+        <input asp-for="ContactName" class="form-control" />
+        <span asp-validation-for="ContactName" class="text-danger"></span>
+    </div>
+    <div class="col-md-6 mb-3">
+        <label asp-for="ContactTitle" class="form-label">Contact title</label>
+        <input asp-for="ContactTitle" class="form-control" />
+        <span asp-validation-for="ContactTitle" class="text-danger"></span>
+    </div>
+</div>
+
+<div class="mb-3">
+    <label asp-for="Phone" class="form-label">Phone</label>
+    <input asp-for="Phone" class="form-control" />
+    <span asp-validation-for="Phone" class="text-danger"></span>
+</div>
+
+<div class="mb-3">
+    <label asp-for="Address" class="form-label">Address</label>
+    <textarea asp-for="Address" class="form-control" rows="2"></textarea>
+    <span asp-validation-for="Address" class="text-danger"></span>
+</div>
+
+<div class="row">
+    <div class="col-md-6 mb-3">
+        <label asp-for="City" class="form-label">City</label>
+        <input asp-for="City" class="form-control" />
+        <span asp-validation-for="City" class="text-danger"></span>
+    </div>
+    <div class="col-md-6 mb-3">
+        <label asp-for="Country" class="form-label">Country</label>
+        <input asp-for="Country" class="form-control" />
+        <span asp-validation-for="Country" class="text-danger"></span>
+    </div>
+</div>
+
+<div class="mb-3">
+    <label asp-for="ModifiedBy" class="form-label">Modified by</label>
+    <input asp-for="ModifiedBy" class="form-control" />
+    <span asp-validation-for="ModifiedBy" class="text-danger"></span>
+</div>
+

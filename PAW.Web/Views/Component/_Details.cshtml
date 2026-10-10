@@ -1,0 +1,13 @@
+﻿@model PAW.Web.Models.ComponentDetailsViewModel
+
+<dl class="row mb-0">
+    <dt class="col-sm-4">Component ID</dt>
+    <dd class="col-sm-8">@Model.Component.Id</dd>
+
+    <dt class="col-sm-4">Name</dt>
+    <dd class="col-sm-8">@Model.Component.Name</dd>
+
+    <dt class="col-sm-4">Content</dt>
+    <dd class="col-sm-8">@(string.IsNullOrWhiteSpace(Model.Component.Content) ? "Not available" : Model.Component.Content)</dd>
+</dl>
+

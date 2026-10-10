@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PAW.Architecture\PAW.Architecture.csproj" />
+    <ProjectReference Include="..\PAW.DataAccess\PAW.DataAccess.csproj" />
     <ProjectReference Include="..\PAW.Models\PAW.Models.csproj" />
   </ItemGroup>
 
